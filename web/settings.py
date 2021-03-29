@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'django_forms_bootstrap',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -129,4 +130,5 @@ AUTHENTICATION_BACKENDS = [
 # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
